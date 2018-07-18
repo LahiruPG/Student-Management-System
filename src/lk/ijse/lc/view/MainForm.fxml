@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="apnMain" focusTraversable="true" prefHeight="782.0" prefWidth="1270.0" stylesheets="@../style/mainform.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lc.controller.MainFormController">
+   <children>
+      <AnchorPane fx:id="apnRoot" layoutX="219.0" layoutY="127.0" prefHeight="544.0" prefWidth="1045.0" style="-fx-background-color: gray;" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="219.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="127.0">
+         <children>
+            <AnchorPane fx:id="apnAttendences" layoutX="34.0" prefHeight="539.0" prefWidth="1073.0" style="-fx-background-color: e7e7e7;" visible="false" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox layoutX="14.0" layoutY="14.0" prefHeight="441.0" prefWidth="218.0" spacing="20.0">
+                     <children>
+                        <JFXTextField labelFloat="true" promptText="CID" />
+                        <JFXTextField labelFloat="true" promptText="Course Name" />
+                        <JFXTextField labelFloat="true" promptText="Course Fee" />
+                     </children>
+                  </VBox>
+                  <TableView layoutX="240.0" layoutY="14.0" prefHeight="510.0" prefWidth="794.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="14.0">
+                    <columns>
+                      <TableColumn prefWidth="389.0" text="C1" />
+                      <TableColumn minWidth="0.0" prefWidth="371.0" text="C2" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <BorderPane fx:id="rootPane" layoutX="14.0" layoutY="14.0" prefHeight="544.0" prefWidth="1045.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="8.0" layoutY="8.0" prefHeight="110.0" prefWidth="1254.0" style="-fx-background-color: #35a8d4;" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+         <children>
+            <Label fx:id="lblTime" layoutX="14.0" layoutY="75.0" text="Label" />
+            <ImageView fitHeight="110.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/banner.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <VBox layoutX="2.0" layoutY="118.0" prefHeight="606.0" prefWidth="218.0" spacing="10.0" AnchorPane.bottomAnchor="6.0" AnchorPane.topAnchor="118.0">
+         <children>
+            <Button fx:id="btnManageStudent" mnemonicParsing="false" onAction="#btnManageStudentAction" prefHeight="80.0" prefWidth="200.0" text="Manage Student" />
+            <Button fx:id="btnManageBatch" mnemonicParsing="false" onAction="#btnManageBatchAction" prefHeight="80.0" prefWidth="200.0" text="Manage Batch" />
+            <Button mnemonicParsing="false" onAction="#btnCourseAction" prefHeight="80.0" prefWidth="200.0" text="Manage Course" />
+            <Button fx:id="btnStudentReg" mnemonicParsing="false" onAction="#btnStudentRegAction" prefHeight="80.0" prefWidth="200.0" text="Manage Regestrations" />
+            <Button fx:id="btnManagePayment" mnemonicParsing="false" onAction="#btnManagePaymentAction" prefHeight="80.0" prefWidth="200.0" text="Payments" />
+            <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="200.0" text="About" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

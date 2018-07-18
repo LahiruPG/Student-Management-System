@@ -1,0 +1,29 @@
+/*
+ * Empty Stylesheet file.
+*/
+
+.mainFxmlClass {
+-fx-background-color: #494949;
+}
+/*.button:hover{
+   -fx-background-color: blue;
+   
+}
+*/
+.glyph-icon{
+    -fx-fill: crimson;
+}
+.button:hover .glyph-icon{
+    -fx-fill: white;
+}
+.VBox{
+    -fx-background-color: blue;
+}
+.add{
+    -fx-background-color: #039be5;
+    -fx-text-fill: white;
+}
+.mainBtns{
+    -fx-border-color: #ffffff;
+    -fx-border-width: 0.25;
+}

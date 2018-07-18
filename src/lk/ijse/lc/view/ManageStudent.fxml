@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane id="AnchorPane" fx:id="apnManageStudent" prefHeight="866.0" prefWidth="1246.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lc.controller.ManageStudentController">
+    <stylesheets>
+        <URL value="@/lk/ijse/lc/style/managestudent.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane fx:id="apnStuddentReg" layoutX="-1.0" layoutY="-1.0" prefHeight="799.0" prefWidth="1000.0" style="-fx-background-color: #e7e7e7e7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane layoutY="1.0" prefHeight="843.0" prefWidth="801.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <tabs>
+                  <Tab text="Student Details">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="736.0" prefWidth="801.0">
+                           <children>
+                              <TitledPane collapsible="false" layoutX="6.0" layoutY="6.0" prefHeight="603.0" prefWidth="302.0" text="Student details" wrapText="true">
+                                 <content>
+                                    <VBox prefHeight="522.0" prefWidth="300.0" spacing="20.0">
+                                       <children>
+                                          <JFXTextField fx:id="txtSid" labelFloat="true" promptText="Student ID                              Ex. (S0001)" />
+                                          <JFXTextField fx:id="txtName" labelFloat="true" promptText="Name" />
+                                          <VBox prefHeight="32.0" prefWidth="276.0">
+                                             <children>
+                                                <Label text="Gender" textFill="#726b6b">
+                                                   <padding>
+                                                      <Insets left="20.0" />
+                                                   </padding>
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" left="-20.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <HBox prefHeight="19.0" prefWidth="248.0">
+                                                   <children>
+                                                      <JFXRadioButton fx:id="rdbMale" onAction="#rdbMaleAction" text="Male">
+                                                         <HBox.margin>
+                                                            <Insets left="-10.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton fx:id="rdbFemale" onAction="#rdbFemaleAction" text="Female">
+                                                         <HBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </HBox.margin>
+                                                      </JFXRadioButton>
+                                                   </children>
+                                                </HBox>
+                                                <Line endX="100.0" startX="378.0">
+                                                   <VBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </VBox.margin>
+                                                </Line>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="-10.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <JFXTextArea fx:id="txtAddress" labelFloat="true" prefHeight="114.0" prefWidth="290.0" promptText="Address                           Ex. (Galle, Galle.)">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                          </JFXTextArea>
+                                          <JFXTextField fx:id="txtContact" labelFloat="true" promptText="Contact No                    Ex.(077-1234567)" />
+                                          <JFXTextField fx:id="txtDob" labelFloat="true" promptText="DOB                                 Ex. (1995-01-02)" />
+                                          <JFXTextField fx:id="txtNic" labelFloat="true" promptText="NIC No.                           Ex. (123456789V)" />
+                                          <HBox spacing="15.0">
+                                             <children>
+                                                <JFXButton fx:id="btnSAdd" buttonType="RAISED" onAction="#btnSAddAction" prefHeight="31.0" prefWidth="99.0" ripplerFill="WHITE" styleClass="add" stylesheets="@../style/managestudent.css" text="Add" />
+                                                <JFXButton fx:id="btnUpdate" buttonType="RAISED" onAction="#btnUpdateAction" prefHeight="31.0" prefWidth="97.0" ripplerFill="WHITE" styleClass="add" stylesheets="@../style/managestudent.css" text="Update" />
+                                                <JFXButton fx:id="btnSDelete" buttonType="RAISED" onAction="#btnSDeleteAction" prefHeight="31.0" prefWidth="97.0" ripplerFill="WHITE" styleClass="add" stylesheets="@../style/managestudent.css" text="Delete" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="2.0" left="5.0" right="5.0" top="-10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <JFXButton fx:id="btnClear" buttonType="RAISED" onAction="#btnClearAction" prefHeight="31.0" prefWidth="334.0" styleClass="add" stylesheets="@../style/managestudent.css" text="Clear">
+                                             <VBox.margin>
+                                                <Insets left="5.0" right="5.0" top="-5.0" />
+                                             </VBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="15.0" />
+                                       </padding>
+                                    </VBox>
+                                 </content>
+                              </TitledPane>
+                              <TableView fx:id="tblStudent" layoutX="316.0" layoutY="50.0" prefHeight="770.0" prefWidth="476.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="316.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="50.0">
+                                <columns>
+                                  <TableColumn fx:id="colSid" prefWidth="92.0" text="Srudent ID" />
+                                  <TableColumn fx:id="colSName" minWidth="3.0" prefWidth="162.0" text="Name" />
+                                    <TableColumn fx:id="colSGender" minWidth="0.0" prefWidth="108.0" text="Gender" />
+                                    <TableColumn fx:id="colSAddress" prefWidth="141.0" text="Address" />
+                                    <TableColumn fx:id="colSContact" prefWidth="169.0" text="Contact Number" />
+                                    <TableColumn fx:id="colSDob" prefWidth="120.0" text="DOB" />
+                                    <TableColumn fx:id="colSNic" prefWidth="128.0" text="NIC No" />
+                                </columns>
+                              </TableView>
+                              <JFXTextField fx:id="txtSerch" layoutX="316.0" layoutY="6.0" promptText="Serch Student ID" />
+                              <JFXButton buttonType="RAISED" layoutX="500.0" layoutY="5.0" text="Clear" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tabGuardian" onSelectionChanged="#tabGuardianAction" text="Guardian Details">
+                     <content>
+                        <AnchorPane fx:id="apNGuardian" minHeight="0.0" minWidth="0.0" prefHeight="804.0" prefWidth="301.0">
+                           <children>
+                              <BorderPane fx:id="bpnGuardian" prefHeight="827.0" prefWidth="1246.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

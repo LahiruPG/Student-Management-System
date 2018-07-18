@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="707.0" prefWidth="1184.0" style="-fx-background-color: #e7e7e7;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.lc.controller.ManagePaymentsController">
+    <stylesheets>
+        <URL value="@/lk/ijse/lc/style/managepayments.css" />
+    </stylesheets>
+   <children>
+      <TabPane layoutX="434.0" layoutY="154.0" prefHeight="737.0" prefWidth="1055.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Payment Details">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="645.0" prefWidth="1055.0">
+                     <children>
+                        <TitledPane collapsible="false" layoutX="14.0" layoutY="18.0" prefHeight="387.0" prefWidth="291.0" text="Payment Details">
+                           <content>
+                              <VBox prefHeight="597.0" prefWidth="289.0" spacing="20.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtPid" labelFloat="true" promptText="PID" />
+                                    <JFXTextField fx:id="txtRid" labelFloat="true" promptText="Regestration ID" />
+                                    <JFXTextField fx:id="txtCid" labelFloat="true" promptText="Course ID" />
+                                    <JFXTextField fx:id="txtAmount" labelFloat="true" prefHeight="0.0" prefWidth="269.0" promptText="Amount" />
+                                    <JFXTextField fx:id="txtDate" labelFloat="true" promptText="Date" />
+                                    <HBox spacing="15.0">
+                                       <children>
+                                          <JFXButton fx:id="btnAdd" buttonType="RAISED" onAction="#btnAddAction" prefHeight="31.0" prefWidth="99.0" ripplerFill="WHITE" styleClass="add" stylesheets="@../style/managestudent.css" text="Add" />
+                                          <JFXButton fx:id="btnUpdate" buttonType="RAISED" onAction="#btnUpdateAction" prefHeight="31.0" prefWidth="97.0" ripplerFill="WHITE" styleClass="add" stylesheets="@../style/managestudent.css" text="Update" />
+                                          <JFXButton fx:id="btnDelete" buttonType="RAISED" onAction="#btnDeleteAction" prefHeight="31.0" prefWidth="97.0" ripplerFill="WHITE" styleClass="add" stylesheets="@../style/managestudent.css" text="Delete" />
+                                       </children>
+                                    </HBox>
+                                    <JFXButton fx:id="btnClear" buttonType="RAISED" onAction="#btnClearAction" prefHeight="31.0" prefWidth="285.0" styleClass="add" stylesheets="@../style/managepayments.css" text="Clear">
+                                       <VBox.margin>
+                                          <Insets top="-10.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                        <TableView fx:id="tblPayments" layoutX="315.0" layoutY="60.0" prefHeight="568.0" prefWidth="715.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="315.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="60.0">
+                          <columns>
+                            <TableColumn fx:id="colPid" prefWidth="109.0" text="PID" />
+                              <TableColumn fx:id="colRid" prefWidth="224.0" text="Regestration ID" />
+                            <TableColumn fx:id="colCid" minWidth="0.0" prefWidth="124.0" text="Course ID" />
+                              <TableColumn fx:id="colAmount" prefWidth="196.0" text="Amount" />
+                              <TableColumn fx:id="colDate" prefWidth="257.0" text="Date" />
+                          </columns>
+                        </TableView>
+                        <JFXTextField layoutX="316.0" layoutY="18.0" promptText="Serch Payment ID" />
+                        <JFXButton layoutX="505.0" layoutY="17.0" prefHeight="31.0" prefWidth="79.0" text="Clear" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
