@@ -101,5 +101,8 @@ CREATE TABLE attendence(
 insert into regestration
 values('R001','S001','B001',200.00,'1990-10-03');
 
-	
+insert into course
+values('C001','Lahiru',200.00,'3 Mounts');
+
+	INSERT INTO student VALUE ('S01','Lahiru','Male','Galle','077-2050642',1995-08-21,'952340301V');
 	
